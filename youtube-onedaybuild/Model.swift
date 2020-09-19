@@ -32,10 +32,23 @@ class Model{
             
             }
             
-            // PARSING THE DATA INTO VIDEO OBJECTS
+            do {
+                // PARSING THE DATA INTO VIDEO OBJECTS
+                let decoder = JSONDecoder()
+                decoder.dateDecodingStrategy = .iso8601
+                
+                let response = try decoder.decode(Response.self, from: data!)
+            }
+            
+            catch {
+                
+                
+            }
+            
             
         }
         
+       
         
         // KICK OFF THE TASK
         dataTask.resume()

@@ -19,7 +19,7 @@ class ViewController: UIViewController {
         model.getVideos()
         
     }
-
+    
 
 }
 
